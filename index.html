@@ -56,7 +56,7 @@
 
         h1 {
             color: #ffffff;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             font-size: 42px;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -70,6 +70,17 @@
             letter-spacing: 0.5px;
         }
 
+        .profile-image {
+            width: 180px; /* Scaled for web balance while maintaining 1:1 ratio */
+            height: 180px;
+            margin-bottom: 25px;
+            display: block;
+            border-radius: 15px; /* Optional slight roundness on the corners */
+            object-fit: contain; /* Ensures the whole 699x699 image is visible and unobstructed */
+            border: none; /* No border box */
+            background: transparent; /* No background box */
+        }
+        
         .instruction-box {
             background: rgba(255, 255, 255, 0.08);
             padding: 20px;
@@ -92,6 +103,7 @@
 <body>
 
     <div class="glass-card">
+        <img src="profile_image.png" alt="Mondal Family" class="profile-image">
         <h1>Mondal Family</h1>
         <h2>This is The Family Domain of The Mondals'</h2>
         
