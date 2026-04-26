@@ -61,6 +61,17 @@
             letter-spacing: 1px;
         }
 
+        .profile-image {
+            width: 100px; /* Scaled for web balance while maintaining 1:1 ratio */
+            height: 100px;
+            margin: 0 auto 25px auto;
+            display: block;
+            border-radius: 15px; /* Optional slight roundness on the corners */
+            object-fit: contain; /* Ensures the whole 699x699 image is visible and unobstructed */
+            border: none; /* No border box */
+            background: transparent; /* No background box */
+        }
+
         .instruction-box {
             display: flex;
             flex-direction: column;
@@ -105,6 +116,7 @@
 <body>
 
     <div class="glass-card">
+        <img src="profile_image.png" alt="Redirecting..." class="profile-image">
         <h1>Redirecting...</h1>
         
         <div class="instruction-box">
