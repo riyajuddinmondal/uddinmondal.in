@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        /* Custom Font */
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url('font.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'MyCustomFont', sans-serif;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* Remote Background Image */
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+
+        .glass-card {
+            background: rgba(0, 0, 0, 0.45); 
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 50px 40px;
+            border-radius: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            width: 90%;
+            max-width: 480px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 35px;
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+
+        .profile-image {
+            width: 100px; /* Scaled for web balance while maintaining 1:1 ratio */
+            height: 100px;
+            margin: 0 auto 25px auto;
+            display: block;
+            border-radius: 15px; /* Optional slight roundness on the corners */
+            object-fit: contain; /* Ensures the whole 699x699 image is visible and unobstructed */
+            border: none; /* No border box */
+            background: transparent; /* No background box */
+        }
+
+        .instruction-box {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            color: white;
+            font-size: 16px;
+            margin-bottom: 25px;
+            text-align: center;
+            list-style-type: none;
+        }
+
+        .instruction-text {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 12px 18px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            opacity: 0.7;
+            transition: 0.3s;
+            padding: 10px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+        }
+
+        .btn:hover {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glass-card">
+        <img src="profile_image.png" alt="Redirecting..." class="profile-image">
+        <h1>Redirecting...</h1>
+        
+        <div class="instruction-box">
+            <p class="instruction-text">If you are not moved automatically, Click below to Redirect:</p>
+        </div>
+
+        <a href="https://www.uddinmondal.in" class="btn">Click to Redirect</a>
+    </div>
+
+    <script>
+        // Redirect Logic
+        const target = "https://www.uddinmondal.in";
+        setTimeout(() => {
+            window.location.href = target;
+        }, 1500); // 1.5s delay to allow the animation to play
+    </script>
+
+</body>
+</html>
